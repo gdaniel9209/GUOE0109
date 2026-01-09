@@ -18,7 +18,9 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++
 
     - name: Build Hello World
-      run: g++ src/main.cpp -o build/main
+      run: |
+    mkdir -p build
+    g++ src/main.cpp -o build/main
 
     - name: Run the program
       run: ./build/main
