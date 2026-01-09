@@ -18,8 +18,8 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++
 
     - name: Build Hello World
-      run: g++ src/hello.cpp -o out/hello_world
+      run: g++ src/main.cpp -o build/main
 
     - name: Run the program
-      run: ./out/hello_world
+      run: ./build/main
 
