@@ -1,0 +1,25 @@
+name: Build C++ Hello World
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Build Hello World
+      run: g++ src/hello.cpp -o out/hello_world
+
+    - name: Run the program
+      run: ./out/hello_world
+
