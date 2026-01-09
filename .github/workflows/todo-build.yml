@@ -1,4 +1,4 @@
-name: Build C++ Hello World
+name: Build C++ Vizsga GUOE0109
 
 on:
   push:
