@@ -16,7 +16,7 @@ jobs:
       - name: Install g++
         run: sudo apt-get update && sudo apt-get install -y g++
 
-      - name: Build Hello World
+      - name: Build Vizsga GUOE0109
         run: |
           mkdir -p build
           g++ -std=c++17 -O2 -Wall -Wextra src/main.cpp -o build/main
